@@ -16,7 +16,7 @@ Running the simulations
 Add this package to the src folder in your workspace , from the root run
 ```bash
 rosdep install --from-paths src --ignore-src -r -y
-colcon build
+colcon build --packages-select simulation
 source ./install/setup.bash
 ros2 launch simulation display.launch.py
 ```
