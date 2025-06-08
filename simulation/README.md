@@ -15,6 +15,7 @@ Running the simulations
 
 Add this package to the src folder in your workspace , from the root run
 ```bash
+rosdep install --from-paths src --ignore-src -r -y
 colcon build
 source ./install/setup.bash
 ros2 launch simulation display.launch.py
@@ -22,6 +23,4 @@ ros2 launch simulation display.launch.py
 
 To run the teleop node , open a new terminal and source the workspace
 ```bash
-cd src/simulation/scripts
-chmod +x bluerov_teleop_ign.py
-./bluerov_teleop_ign.py
+ros2 run simulation bluerov_teleop_ign.py
